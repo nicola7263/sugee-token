@@ -5,3 +5,9 @@
 
 ---
 
+![alt text](image.png)
+
+完了したら commit push 必要ならmergeまでやって
+
+
+人間がやらかした。のすぐ上の$SUGEE TOKENってのがダサく見えるからいらないかも。
