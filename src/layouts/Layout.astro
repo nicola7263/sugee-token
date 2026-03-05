@@ -1,0 +1,127 @@
+---
+import { getTranslations, flattenTranslations } from '../i18n/utils';
+import '../styles/global.css';
+
+const ja = getTranslations('ja');
+const en = getTranslations('en');
+const jaFlat = flattenTranslations(ja);
+const enFlat = flattenTranslations(en);
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'すげぇトークン ($SUGEE) | 人間がやらかした。だからAIが作った。',
+  description = 'AIエージェントが自律的にローンチしたフェアローンチミームトークン on Solana。プレセールなし、チーム割当なし、完全透明。',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+
+    <!-- OGP -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/sugeetoken-icon.png" />
+    <meta property="og:site_name" content="$SUGEE" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@sugeetoken" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="/sugeetoken-icon.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/sugeetoken-icon.png" />
+  </head>
+  <body class="min-h-screen overflow-x-hidden">
+    <div class="noise-overlay" aria-hidden="true"></div>
+    <slot />
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <!-- i18n + scroll animation script -->
+    <script is:inline define:vars={{ jaFlat, enFlat }}>
+      (function () {
+        const translations = { ja: jaFlat, en: enFlat };
+
+        function detectLang() {
+          const saved = localStorage.getItem('sugee-lang');
+          if (saved && translations[saved]) return saved;
+          const nav = navigator.language || '';
+          return nav.startsWith('ja') ? 'ja' : 'en';
+        }
+
+        function applyLang(lang) {
+          const dict = translations[lang];
+          if (!dict) return;
+          document.documentElement.lang = lang;
+          localStorage.setItem('sugee-lang', lang);
+
+          document.querySelectorAll('[data-i18n]').forEach(function (el) {
+            var key = el.getAttribute('data-i18n');
+            if (dict[key] !== undefined) {
+              if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                el.placeholder = dict[key];
+              } else {
+                el.textContent = dict[key];
+              }
+            }
+          });
+
+          document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+            var key = el.getAttribute('data-i18n-html');
+            if (dict[key] !== undefined) {
+              el.innerHTML = dict[key].replace(/\n/g, '<br>');
+            }
+          });
+
+          // Update toggle buttons
+          document.querySelectorAll('[data-lang-toggle]').forEach(function (btn) {
+            var btnLang = btn.getAttribute('data-lang-toggle');
+            if (btnLang === lang) {
+              btn.classList.add('bg-gold', 'text-black');
+              btn.classList.remove('text-text-muted');
+            } else {
+              btn.classList.remove('bg-gold', 'text-black');
+              btn.classList.add('text-text-muted');
+            }
+          });
+        }
+
+        // Expose globally
+        window.__sugee = { applyLang: applyLang, detectLang: detectLang, translations: translations };
+
+        // Apply on load
+        var lang = detectLang();
+        applyLang(lang);
+
+        // Intersection Observer for scroll animations
+        var observer = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+        );
+
+        document.querySelectorAll('.scroll-animate').forEach(function (el) {
+          observer.observe(el);
+        });
+      })();
+    </script>
+  </body>
+</html>

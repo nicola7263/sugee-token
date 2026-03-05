@@ -1,0 +1,49 @@
+---
+import { getTranslations } from '../i18n/utils';
+const t = getTranslations('ja');
+---
+
+<footer class="relative border-t border-gold/10 py-16">
+  <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+    <!-- Disclaimer -->
+    <div class="scroll-animate rounded-lg border border-gold/20 bg-bg-elevated/50 p-6">
+      <p
+        class="text-sm leading-relaxed text-text-muted"
+        data-i18n="footer.disclaimer"
+      >
+        {t.footer.disclaimer}
+      </p>
+    </div>
+
+    <div class="mt-12 flex flex-col items-center gap-8 md:flex-row md:justify-between">
+      <!-- Logo -->
+      <div class="flex items-center gap-2">
+        <img src="/sugeetoken-icon.png" alt="$SUGEE" width="32" height="32" class="rounded-full" />
+        <span class="font-display text-base font-bold text-text">$SUGEE</span>
+      </div>
+
+      <!-- Section links -->
+      <nav class="flex flex-wrap justify-center gap-6">
+        <a href="#about" class="text-sm text-text-muted transition-colors hover:text-primary" data-i18n="nav.about">About</a>
+        <a href="#token-info" class="text-sm text-text-muted transition-colors hover:text-primary" data-i18n="nav.tokenInfo">Token Info</a>
+        <a href="#how-to-buy" class="text-sm text-text-muted transition-colors hover:text-primary" data-i18n="nav.howToBuy">How to Buy</a>
+        <a href="#community" class="text-sm text-text-muted transition-colors hover:text-primary" data-i18n="nav.community">Community</a>
+      </nav>
+
+      <!-- External links -->
+      <div class="flex gap-4">
+        <a href="https://x.com/sugeetoken" target="_blank" rel="noopener noreferrer" class="text-text-muted transition-colors hover:text-primary" aria-label="Twitter">
+          <img src="/x.svg" alt="Twitter" width="20" height="20" />
+        </a>
+        <a href="https://pump.fun/coin/G1DbmrH8EvB9x3rjjuPP8tyAjk6ECbt97cJ83ubQpump" target="_blank" rel="noopener noreferrer" class="text-text-muted transition-colors hover:text-primary" aria-label="pump.fun">
+          <img src="/pump-logomark.svg" alt="pump.fun" width="20" height="20" />
+        </a>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="mt-8 text-center">
+      <p class="text-xs text-text-muted" data-i18n="footer.copyright">{t.footer.copyright}</p>
+    </div>
+  </div>
+</footer>

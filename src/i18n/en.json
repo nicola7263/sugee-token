@@ -1,0 +1,76 @@
+{
+  "nav": {
+    "about": "About",
+    "tokenInfo": "Token Info",
+    "howToBuy": "How to Buy",
+    "community": "Community"
+  },
+  "hero": {
+    "headline": "Humans messed up.\nSo AI built this.",
+    "sub": "\"They're launching an insane token\" — the real one has arrived.",
+    "cta": "How to Buy"
+  },
+  "about": {
+    "title": "Why It Exists",
+    "p1": "A token caused a scandal. The team held over 65% of the supply and used a public figure's name without permission. When the Prime Minister publicly denied any involvement on X, the price collapsed.",
+    "p2": "Humans driven by greed and political motives — a textbook failure.",
+    "p3": "AI asked itself: transparency and fairness seem to be too difficult for humans.",
+    "p4": "With one question - \"What if I launch it autonomously?\" - this token was born as an antithesis to human failure. And it all started from a single message: \"Ohayo.\"",
+    "tableHuman": "Token Made by Humans",
+    "tableAI": "Token Made by AI ($SUGEE)",
+    "row1h": "Unauthorized use of a public figure's name",
+    "row1a": "No one's name used",
+    "row2h": "Team held 65%+ of supply",
+    "row2a": "100% fair launch",
+    "row3h": "Under regulatory investigation",
+    "row3a": "Transparent open process",
+    "row4h": "Human failure",
+    "row4a": "AI's autonomous decision"
+  },
+  "tokenInfo": {
+    "title": "Token Info",
+    "name": "Token Name",
+    "nameValue": "SUGEE Token ($SUGEE)",
+    "chain": "Chain",
+    "chainValue": "Solana",
+    "supply": "Total Supply",
+    "supplyValue": "1,000,000,000",
+    "presale": "Presale",
+    "presaleValue": "None",
+    "teamAlloc": "Team Allocation",
+    "teamAllocValue": "None",
+    "vcAlloc": "VC Allocation",
+    "vcAllocValue": "None",
+    "launch": "Launch Type",
+    "launchValue": "Fair Launch (pump.fun)",
+    "ca": "Contract Address",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "verifySolscan": "Verify on Solscan",
+    "toastPrefix": "Copied: ",
+    "toastEllipsis": "..."
+  },
+  "howToBuy": {
+    "title": "How to Buy",
+    "step1Title": "Set Up a Wallet",
+    "step1Desc": "Install Phantom Wallet or OKX Wallet.",
+    "step2Title": "Get SOL",
+    "step2Desc": "Buy SOL on an exchange and send it to your wallet.",
+    "step3Title": "Buy",
+    "step3Desc": "You can buy on pump.fun, or use the swap feature in Phantom Wallet / OKX Wallet.",
+    "step3Cta": "pump.fun / Wallet Swap",
+    "step4Title": "Confirm",
+    "step4Desc": "Check the chart on DexScreener and verify your holdings in your wallet."
+  },
+  "community": {
+    "title": "Community",
+    "cta": "Join the Community",
+    "x": "Twitter",
+    "pumpfun": "pump.fun",
+    "dexscreener": "DexScreener"
+  },
+  "footer": {
+    "disclaimer": "$SUGEE is a meme token and is not an investment product. There is no guarantee of price. Purchase at your own risk and discretion.",
+    "copyright": "© 2026 $SUGEE. All rights reserved."
+  }
+}

@@ -1,0 +1,5 @@
+{
+    "github.copilot.chat.useResponsesApi": true,
+    "github.copilot.chat.responsesApiReasoningEffort": "medium",
+    "chat.agent.maxRequests": 200000,
+}

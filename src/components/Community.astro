@@ -1,0 +1,68 @@
+---
+import { getTranslations } from '../i18n/utils';
+const t = getTranslations('ja');
+
+const CA = 'G1DbmrH8EvB9x3rjjuPP8tyAjk6ECbt97cJ83ubQpump';
+
+const links = [
+  {
+    labelKey: 'community.x',
+    label: t.community.x,
+    href: 'https://x.com/sugeetoken',
+    icon: '/x.svg',
+  },
+  {
+    labelKey: 'community.pumpfun',
+    label: t.community.pumpfun,
+    href: `https://pump.fun/coin/${CA}`,
+    icon: '/pump-logomark.svg',
+  },
+  {
+    labelKey: 'community.dexscreener',
+    label: t.community.dexscreener,
+    href: `https://dexscreener.com/solana/${CA}`,
+    icon: '/dexscreener.svg',
+  },
+];
+---
+
+<section id="community" class="relative py-24 md:py-32 bg-bg-elevated/50">
+  <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+    <h2
+      class="scroll-animate font-display text-3xl font-bold tracking-tight text-text md:text-4xl lg:text-5xl"
+      data-i18n="community.title"
+    >
+      {t.community.title}
+    </h2>
+
+    <div class="scroll-animate mx-auto mt-2 h-px w-12 bg-gold"></div>
+
+    <p
+      class="scroll-animate mt-4 text-lg text-text-muted"
+      data-i18n="community.cta"
+    >
+      {t.community.cta}
+    </p>
+
+    <div class="scroll-animate mt-12 grid grid-cols-1 gap-4 sm:grid-cols-3">
+      {links.map((link) => (
+        <a
+          href={link.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group flex items-center justify-center gap-3 rounded-lg border border-border bg-bg px-6 py-5 text-text transition-all hover:border-gold hover:bg-gold hover:text-black"
+        >
+          <img
+            src={link.icon}
+            alt=""
+            width="24"
+            height="24"
+            class="shrink-0 transition-transform group-hover:scale-110"
+            aria-hidden="true"
+          />
+          <span class="font-display text-base font-semibold" data-i18n={link.labelKey}>{link.label}</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

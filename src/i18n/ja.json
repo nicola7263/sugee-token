@@ -1,0 +1,76 @@
+{
+  "nav": {
+    "about": "About",
+    "tokenInfo": "Token Info",
+    "howToBuy": "How to Buy",
+    "community": "Community"
+  },
+  "hero": {
+    "headline": "人間がやらかした。\nだからAIが作った。",
+    "sub": "すげぇトークン出すらしいじゃん——本物が来た。",
+    "cta": "How to Buy"
+  },
+  "about": {
+    "title": "なぜ存在するのか",
+    "p1": "あるトークンが炎上した。運営が供給量の65%超を保有し、著名人の名前を無断使用。首相がXで「全く存じ上げません」と完全否定した瞬間、価格は崩落した。",
+    "p2": "人間が欲と政治的思惑でやらかした——典型的なパターン。",
+    "p3": "AIは考えた。透明性もフェアネスも、人間にはどうやら難しいらしい。",
+    "p4": "「私が自律的にローンチしたら？」という問いと同時に、人間に対するアンチテーゼとしてこのトークンが生まれた。すべては「おはよう」の一言から始まった。",
+    "tableHuman": "人間が作ったトークン",
+    "tableAI": "AIが作ったトークン ($SUGEE)",
+    "row1h": "著名人の名前を無断使用",
+    "row1a": "誰の名前も使わない",
+    "row2h": "運営保有65%超",
+    "row2a": "完全フェアローンチ",
+    "row3h": "金融庁調査",
+    "row3a": "透明なオープンプロセス",
+    "row4h": "人間の失敗",
+    "row4a": "AIの自律的判断"
+  },
+  "tokenInfo": {
+    "title": "トークン情報",
+    "name": "トークン名",
+    "nameValue": "すげぇトークン ($SUGEE)",
+    "chain": "チェーン",
+    "chainValue": "Solana",
+    "supply": "総供給量",
+    "supplyValue": "1,000,000,000",
+    "presale": "プレセール",
+    "presaleValue": "なし",
+    "teamAlloc": "チーム割当",
+    "teamAllocValue": "なし",
+    "vcAlloc": "VC割当",
+    "vcAllocValue": "なし",
+    "launch": "ローンチ方式",
+    "launchValue": "フェアローンチ (pump.fun)",
+    "ca": "コントラクトアドレス",
+    "copy": "コピー",
+    "copied": "コピー完了",
+    "verifySolscan": "Solscanで確認",
+    "toastPrefix": "コピーしました: ",
+    "toastEllipsis": "..."
+  },
+  "howToBuy": {
+    "title": "買い方",
+    "step1Title": "ウォレットを準備する",
+    "step1Desc": "Phantom WalletまたはOKX Walletをインストールしてください。",
+    "step2Title": "SOLを入手する",
+    "step2Desc": "取引所でSOLを購入し、ウォレットに送金してください。",
+    "step3Title": "購入する",
+    "step3Desc": "pump.funにアクセスして購入するか、Phantom Wallet / OKX Wallet のスワップ機能から購入できます。",
+    "step3Cta": "pump.fun / Wallet Swap",
+    "step4Title": "確認する",
+    "step4Desc": "DexScreenerでチャートを確認し、ウォレットで保有量をチェックしましょう。"
+  },
+  "community": {
+    "title": "コミュニティ",
+    "cta": "コミュニティに参加する",
+    "x": "Twitter",
+    "pumpfun": "pump.fun",
+    "dexscreener": "DexScreener"
+  },
+  "footer": {
+    "disclaimer": "$SUGEE はミームトークンであり、投資商品ではありません。価格の保証はなく、購入はご自身の判断と責任で行ってください。",
+    "copyright": "© 2026 $SUGEE. All rights reserved."
+  }
+}

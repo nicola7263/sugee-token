@@ -1,0 +1,128 @@
+---
+import { getTranslations } from '../i18n/utils';
+const t = getTranslations('ja');
+
+const CA = 'G1DbmrH8EvB9x3rjjuPP8tyAjk6ECbt97cJ83ubQpump';
+
+const stepDelayClasses = ['', 'delay-100', 'delay-200', 'delay-300'];
+
+const steps = [
+  {
+    num: '01',
+    titleKey: 'howToBuy.step1Title',
+    descKey: 'howToBuy.step1Desc',
+    title: t.howToBuy.step1Title,
+    desc: t.howToBuy.step1Desc,
+    icons: [
+      { src: '/Phantom_SVG_Icon.svg', alt: 'Phantom Wallet', href: 'https://phantom.app/' },
+      { src: '/okx-wallet-logo.png', alt: 'OKX Wallet', href: 'https://web3.okx.com/ja/download' },
+    ],
+  },
+  {
+    num: '02',
+    titleKey: 'howToBuy.step2Title',
+    descKey: 'howToBuy.step2Desc',
+    title: t.howToBuy.step2Title,
+    desc: t.howToBuy.step2Desc,
+  },
+  {
+    num: '03',
+    titleKey: 'howToBuy.step3Title',
+    descKey: 'howToBuy.step3Desc',
+    title: t.howToBuy.step3Title,
+    desc: t.howToBuy.step3Desc,
+    ctaKey: 'howToBuy.step3Cta',
+    cta: t.howToBuy.step3Cta,
+    ctaHref: `https://pump.fun/coin/${CA}`,
+    ctaIcon: '/pump-logomark.svg',
+  },
+  {
+    num: '04',
+    titleKey: 'howToBuy.step4Title',
+    descKey: 'howToBuy.step4Desc',
+    title: t.howToBuy.step4Title,
+    desc: t.howToBuy.step4Desc,
+    icons: [
+      { src: '/dexscreener.svg', alt: 'DexScreener', href: `https://dexscreener.com/solana/${CA}` },
+    ],
+  },
+];
+---
+
+<section id="how-to-buy" class="relative py-24 md:py-32">
+  <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+    <h2
+      class="scroll-animate font-display text-3xl font-bold tracking-tight text-text md:text-4xl lg:text-5xl"
+      data-i18n="howToBuy.title"
+    >
+      {t.howToBuy.title}
+    </h2>
+
+    <div class="scroll-animate mt-2 h-px w-12 bg-gold"></div>
+
+    <!-- Timeline -->
+    <div class="relative mt-16">
+      <!-- Vertical line -->
+      <div class="absolute left-6 top-0 h-full w-px bg-gold/30 md:left-8"></div>
+
+      <div class="space-y-12">
+        {steps.map((step, i) => (
+          <div class={`scroll-animate relative flex gap-6 md:gap-8${stepDelayClasses[i] ? ' ' + stepDelayClasses[i] : ''}`}>
+            <!-- Step number -->
+            <div class="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-gold bg-bg font-display text-lg font-bold text-gold md:h-16 md:w-16 md:text-xl">
+              {step.num}
+            </div>
+
+            <!-- Content -->
+            <div class="flex-1 pb-4">
+              <h3
+                class="font-display text-xl font-bold text-text md:text-2xl"
+                data-i18n={step.titleKey}
+              >
+                {step.title}
+              </h3>
+              <p
+                class="mt-2 text-base leading-relaxed text-text-muted"
+                data-i18n={step.descKey}
+              >
+                {step.desc}
+              </p>
+
+              {/* Icon links (wallets, dexscreener) */}
+              {step.icons && (
+                <div class="mt-4 flex flex-wrap gap-3">
+                  {step.icons.map((icon) => (
+                    <a
+                      href={icon.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="inline-flex items-center gap-2 rounded-lg border border-border bg-bg-elevated px-4 py-2.5 text-sm text-text transition-colors hover:border-primary hover:text-primary"
+                    >
+                      <img src={icon.src} alt={icon.alt} width="20" height="20" class="shrink-0" />
+                      {icon.alt}
+                    </a>
+                  ))}
+                </div>
+              )}
+
+              {/* CTA button (pump.fun) */}
+              {step.ctaKey && (
+                <div class="mt-4">
+                  <a
+                    href={step.ctaHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 rounded-lg border border-border bg-bg-elevated px-4 py-2.5 text-sm text-text transition-colors hover:border-primary hover:text-primary"
+                  >
+                    <img src={step.ctaIcon} alt="" width="20" height="20" class="shrink-0" aria-hidden="true" />
+                    <span data-i18n={step.ctaKey}>{step.cta}</span>
+                  </a>
+                </div>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
