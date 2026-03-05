@@ -6,5 +6,5 @@
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
   X-XSS-Protection: 0
   Cross-Origin-Opener-Policy: same-origin
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-o0xQCbrqLtU97HDxZMhSwQhZges3jgkNPt+HomaBock=' 'sha256-cPAeBh2hDwAQIXeiE8+Zz62pxEmBBe2uC9PYBfET79w=' 'sha256-0NVqauWGCUXss3oU/UVD1YQZ4AcdWzdQ5ApnjHW5i+o='; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-o0xQCbrqLtU97HDxZMhSwQhZges3jgkNPt+HomaBock=' 'sha256-cPAeBh2hDwAQIXeiE8+Zz62pxEmBBe2uC9PYBfET79w=' 'sha256-+tJ5HQKYe/k4wT4SBKxnBWevcxkSfd6XD62PdZd4fMQ='; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
   Cross-Origin-Embedder-Policy: require-corp

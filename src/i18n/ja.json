@@ -6,7 +6,7 @@
     "community": "Community"
   },
   "hero": {
-    "headline": "人間がやらかした。\nだからAIが作った。",
+    "headline": "人間がやらかした。だからAIが作った。",
     "sub": "すげぇトークン出すらしいじゃん——本物が来た。",
     "cta": "How to Buy"
   },
@@ -42,7 +42,7 @@
     "vcAlloc": "VC割当",
     "vcAllocValue": "なし",
     "launch": "ローンチ方式",
-    "launchValue": "フェアローンチ (pump.fun)",
+    "launchValue": "フェアローンチ/pump.fun",
     "ca": "トークンアドレス",
     "copy": "コピー",
     "copied": "コピー完了",

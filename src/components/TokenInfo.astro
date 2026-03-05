@@ -46,18 +46,7 @@ const infoRows = [
 
     <!-- Token Address -->
     <div class="scroll-animate mt-12">
-      <div class="flex items-center gap-3">
-        <p class="text-sm font-medium text-text-muted" data-i18n="tokenInfo.ca">{t.tokenInfo.ca}</p>
-        <a
-          href={`https://solscan.io/token/${CA}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="View on Solscan"
-          class="opacity-70 transition-opacity hover:opacity-100"
-        >
-          <img src="/branding-solscan-logo-dark.svg" alt="Solscan" height="18" class="h-[18px] w-auto" />
-        </a>
-      </div>
+      <p class="text-sm font-medium text-text-muted" data-i18n="tokenInfo.ca">{t.tokenInfo.ca}</p>
       <div class="mt-3">
         <button
           id="copy-ca-btn"
