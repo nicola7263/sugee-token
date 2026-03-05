@@ -1,0 +1,19 @@
+# Example files
+example/
+
+# OS
+.DS_Store
+
+# Dependencies
+node_modules/
+
+# Build
+dist/
+.next/
+out/
+build/
+
+# Environment
+.env
+.env.local
+.env*.local
