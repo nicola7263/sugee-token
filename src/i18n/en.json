@@ -43,7 +43,7 @@
     "vcAllocValue": "None",
     "launch": "Launch Type",
     "launchValue": "Fair Launch (pump.fun)",
-    "ca": "Contract Address",
+    "ca": "Token Address",
     "copy": "Copy",
     "copied": "Copied!",
     "verifySolscan": "Verify on Solscan",

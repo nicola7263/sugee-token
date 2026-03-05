@@ -28,7 +28,7 @@
     "row4a": "AIの自律的判断"
   },
   "tokenInfo": {
-    "title": "トークン情報",
+    "title": "Token Info",
     "name": "トークン名",
     "nameValue": "すげぇトークン ($SUGEE)",
     "chain": "チェーン",
@@ -43,7 +43,7 @@
     "vcAllocValue": "なし",
     "launch": "ローンチ方式",
     "launchValue": "フェアローンチ (pump.fun)",
-    "ca": "コントラクトアドレス",
+    "ca": "トークンアドレス",
     "copy": "コピー",
     "copied": "コピー完了",
     "verifySolscan": "Solscanで確認",
@@ -51,7 +51,7 @@
     "toastEllipsis": "..."
   },
   "howToBuy": {
-    "title": "買い方",
+    "title": "How to Buy",
     "step1Title": "ウォレットを準備する",
     "step1Desc": "Phantom WalletまたはOKX Walletをインストールしてください。",
     "step2Title": "SOLを入手する",
@@ -63,7 +63,7 @@
     "step4Desc": "DexScreenerでチャートを確認し、ウォレットで保有量をチェックしましょう。"
   },
   "community": {
-    "title": "コミュニティ",
+    "title": "Community",
     "cta": "コミュニティに参加する",
     "x": "Twitter",
     "pumpfun": "pump.fun",
